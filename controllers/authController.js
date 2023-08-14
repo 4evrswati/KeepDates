@@ -8,7 +8,7 @@ const createUser = async(req, res) => {
         const {name, email, password, mobile} = req.body;
 
         if(!name || !email || !password || !mobile) {
-            return res.status(400).send({message: 'Plesae, Provide complete details'})
+            return res.status(400).send({message: 'Please, Provide complete details'})
         }
 
         const user = await userModel.findOne({ email })
